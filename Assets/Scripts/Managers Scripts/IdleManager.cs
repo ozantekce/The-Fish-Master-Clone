@@ -118,7 +118,7 @@ public class IdleManager : MonoBehaviour
     {
         offlineEarnings++;
         wallet -= offlineEarningsCost;
-        strengthCost = costs[offlineEarnings - 3];
+        offlineEarningsCost = costs[offlineEarnings - 3];
         PlayerPrefs.SetInt("Offline", offlineEarnings);
         PlayerPrefs.SetInt("Wallet", wallet);
         ScreensManager.instance.ChangeScreen(Screens.MAIN);
